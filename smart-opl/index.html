@@ -122,7 +122,7 @@
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title" style="color:  #2e678d">Bienvenid@ a Alimp!</h2>
+                                            <h2 class="carousel-title" style="color:  #205579">Bienvenid@ a Alimp!</h2>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <li><a class="main-btn rounded-three" href="#about">Sobre nosotros</a></li>
                                                 <li><a class="main-btn rounded-one" href="#contact" style="color: #3d7fac;">Contactanos</a></li>
@@ -149,12 +149,12 @@
                             </div> <!-- carousel caption -->
                         </div> <!-- carousel-item -->
 
-                        <div class="carousel-item bg_cover" style="background-image: url(./assets/images/banner1.jpg)">
+                        <div class="carousel-item bg_cover" style="background-image: url(./assets/images/pexels-expect-best-323705.jpg)">
                             <div class="carousel-caption">
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-6 col-lg-7 col-sm-10">
-                                            <h2 class="carousel-title"  style="color: rgba(255, 255, 255, 0.89);">¡Comenza a disfrutar de espacios impecables con nosotros!</h2>
+                                            <h2 class="carousel-title"  style="color: #0b334e;">¡Comenza a disfrutar de espacios impecables con nosotros!</h2>
                                             <ul class="carousel-btn rounded-buttons">
                                                 <li><a class="main-btn rounded-three" href="#about">Sobre nosotros</a></li>
                                                 <li><a class="main-btn rounded-one" href="#contact" style="color: #3d7fac;">Contactanos</a></li>
@@ -231,7 +231,7 @@
                 <div class="col-lg-6">
                     <div class="single-about d-sm-flex mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.2s">
                         <div class="about-icon">
-                            <img src="./assets/images/personal.jpg" alt="Icon">
+                            <img src="./assets/images/pexels-pixabay-209271.jpg" alt="Icon">
                         </div>
                         <div class="about-content media-body">
                             <h4 class="about-title">Personal calificado</h4>
@@ -438,10 +438,15 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- EMAILJS -->
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!-- EMAILJS -->
+    
     <script type="text/javascript">
     emailjs.init('zl4H7h_t0fuxXFzxO')
     </script>
@@ -461,9 +466,18 @@
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-            btn.value = 'Send Email';
-            alert('Su consulta ha sido enviada!');
-            window.location.reload();
+            btn.value = 'Send Email';            
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Consulta enviada!',
+            showConfirmButton: false,
+            timer: 1500
+            })
+            setTimeout(() => {
+                    window.location.reload();
+                }, 2000); 
+           /*   */
             }, (err) => {
             btn.value = 'Send Email';
             alert(JSON.stringify(err));
