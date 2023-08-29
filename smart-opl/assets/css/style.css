@@ -121,6 +121,12 @@ p {
   color: #6c6c6c;
   margin-top: 24px; }
 
+  @media only screen and (min-width: 320px) and (max-width: 990px){
+    #li1, #li2, #li3, #li4{
+      color: #2e678d;
+    }
+  }
+
 /*===== All Preloader Style =====*/
 .preloader {
   /* Body Overlay */
@@ -629,7 +635,7 @@ p {
     .navbar-area .navbar .navbar-toggler .toggler-icon {
       width: 30px;
       height: 2px;
-      background-color: #121212;
+      background-color: #ffffff;
       margin: 5px 0;
       display: block;
       position: relative;
@@ -1006,7 +1012,7 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #f4f6f7;
+  background-color: #fff;
   height: 100%;
   width: 300px;
   padding-top: 80px;
@@ -1041,7 +1047,13 @@ p {
       font-size: 24px;
       color: #121212; }
   .sidebar-right .sidebar-content .sidebar-menu {
-    margin-top: 40px; }
+    margin-top: 40px;   
+  }
+ /*  @media only screen and (min-width: 320px) and (max-width: 990px){
+    .sidebar-menu{
+      color: #0067f4;
+    }
+  } */
     .sidebar-right .sidebar-content .sidebar-menu ul li a {
       font-size: 16px;
       line-height: 24px;
@@ -1122,7 +1134,7 @@ p {
         .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
           font-size: 44px;
           font-weight: 700;
-          color: #fff;
+          color: #ffffff;
           line-height: 55px; }
           @media (max-width: 767px) {
             .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-title {
@@ -1137,8 +1149,8 @@ p {
           .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-three {
             border: 0; }
           .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one {
-            border-color: #fff;
-            color: #fff; }
+            border-color: #ffffff;
+            color: #5870a5; }
             .slider-area .bd-example .carousel .carousel-inner .carousel-item .carousel-caption .carousel-btn li a.rounded-one:hover {
               background-color: rgba(255, 255, 255, 0.3); }
   .slider-area .bd-example .carousel .carousel-control-prev, .slider-area .bd-example .carousel .carousel-control-next {
@@ -1198,7 +1210,7 @@ p {
       border: 0; }
       .slider-area .bd-example .carousel .carousel-indicators li.active {
         width: 16px;
-        background-color: #fff;
+        background-color: #ffffff;
         border-radius: 5px; }
   .slider-area .bd-example .carousel:hover .carousel-control-prev {
     left: 70px;
